@@ -213,6 +213,26 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+         
+  <settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://ec2-13-235-84-174.ap-south-1.compute.amazonaws.com:9000/
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+</settings>
 
   <scm>
     <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
